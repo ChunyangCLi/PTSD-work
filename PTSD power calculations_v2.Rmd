@@ -592,7 +592,6 @@ print(results$Results)
 ```
 
 
-
 ```{r deepseek code}
 
 # Load necessary libraries
@@ -648,6 +647,23 @@ print(paste("Required sample size:", sample_size))
 
 ```{r}
 
+# install.packages("pwrss")
+library(pwrss)
+
+pwrss.z.logreg(p0 = 0.15, odds.ratio = 0.86, r2.other.x = 0.20,
+               alpha = 0.05, power = 0.80,
+               dist = "normal")
+
+pwrss.z.logreg(p0 = 0.15, odds.ratio = 3.14, r2.other.x = 0.20,
+               alpha = 0.05, power = 0.80,
+               dist = "normal")
+
+```
+
+
+
+```{r}
+
 library(WebPower)
 
 
@@ -676,6 +692,7 @@ print(power_result)
 
 ```
 
+### G power
 
 ## Latent growth mixture models
 ## Reference: https://moshagen.github.io/semPower/#powerLGCM
@@ -718,5 +735,5 @@ alpha = 0.05)
 
 ```
 
-
+## ANOVA on G power
 
